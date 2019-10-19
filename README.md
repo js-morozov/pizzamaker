@@ -1,2 +1,1 @@
-# template
-Template with Sass / Gulp
+Pizza Maker
