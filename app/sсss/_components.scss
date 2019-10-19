@@ -1,0 +1,139 @@
+.component{
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 400px;
+	height: 210px;
+	position: relative;
+	padding: 20px 35px;
+	border-radius: 10px;
+	background: $gray-color;
+	transition: all ease-in .2s;
+	&:before{
+		content: "";
+		display: block;
+		width: 70px;
+		height: 70px;
+		background: $green-color url("../images/plus.svg") center no-repeat;
+		border-radius: 50%;
+		position: absolute;
+		top: calc(50% - 35px);
+		left: calc(50% - 35px);
+		z-index: 1;
+		opacity: 0;
+		transform: scale(0);
+		transition: all ease-in .2s;
+	}
+	&:hover{
+		&:before{
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	&--selected{
+		background: #FFD8A6;
+		&:before{
+			background: #C21313 url("../images/delete.svg") center no-repeat;
+		}
+	}
+	&:active{
+		&:before{
+			transform: scale(.95);
+		}
+	}
+	&__image{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 60px;
+		margin-bottom: 15px;
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__name, &__price{
+		font-size: 14px;
+		line-height: 1.6;
+		text-align: center;
+		color: #782A24;
+		font-weight: bold;
+	}
+	&__price{
+		color: $brown-color;
+		margin-top: auto;
+	}
+}
+
+.switch{
+	display: flex;
+	border: 1px solid #EDEDED;
+	border-radius: 20px;
+	margin-bottom: 10px;
+	&__label{
+		flex-grow: 1;
+		position: relative;
+	}
+	&__radio{
+		display: block;
+		width: 1px;
+		height: 1px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		opacity: 0;
+		visibility: hidden;
+		&:checked + .switch__text{
+			color: #9C8A88;
+			background: #EDEDED;
+		}
+	}
+	&__text{
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 40px;
+		border-radius: 20px;
+		font-size: 14px;
+		color: #C3B9B7;
+		font-weight: bold;
+		transition: all ease-in .2s;
+	}
+}
+
+.button{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 150px;
+	height: 50px;
+	background: $green-color;
+	border-radius: 25px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all ease-in .2s;
+	&:hover{
+		color: $green-color;
+		background: #e1faf4;
+	}
+	&:active{
+		transform: scale(.95);
+	}
+	&--primary{
+		background: $gray-color;
+		color: #725753;
+		border: 1px solid #725753;
+		&:hover{
+			color: #ffffff;
+			background: #725753;
+		}
+	}
+}

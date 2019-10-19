@@ -1,19 +1,13 @@
-$black-color: #19191C;
-$yellow-color: #F6C502;
-$gray-color: #656578;
-$open-sans: "Open Sans", sans-serif;
+$green-color: #009471;
+$brown-color: #70544F;
+$gray-color: #F8F8F8;
 
 @import "reset";
-@import "fonts";
 @import "media";
 @import "components";
 
-@mixin transition($timing, $speed){
-  transition: all $timing #{$speed}s;
-}
-
 ::selection {
-  background-color: $yellow-color;
+  background-color: $green-color;
   color: #ffffff;
 }
 
@@ -22,21 +16,21 @@ $open-sans: "Open Sans", sans-serif;
 }
 
 a{
-  @include transition(ease-in, .2);
+	transition: all ease-in .2s;
 }
 
-input::-webkit-input-placeholder       {color: $gray-color; opacity: 1; transition: opacity 0.3s ease;}
-input::-moz-placeholder                {color: $gray-color; opacity: 1; transition: opacity 0.3s ease;}
-input:-ms-input-placeholder            {color: $gray-color; opacity: 1; transition: opacity 0.3s ease;}
-input:focus::-webkit-input-placeholder {color: $gray-color; opacity: 0; transition: opacity 0.3s ease;}
-input:focus::-moz-placeholder          {color: $gray-color; opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-ms-input-placeholder      {color: $gray-color; opacity: 0; transition: opacity 0.3s ease;}
-textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-textarea::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+input::-webkit-input-placeholder       {color: #C3B9B7; opacity: 1; transition: opacity .3s ease;}
+input::-moz-placeholder                {color: #C3B9B7; opacity: 1; transition: opacity .3s ease;}
+input:-ms-input-placeholder            {color: #C3B9B7; opacity: 1; transition: opacity .3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity .3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity .3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity .3s ease;}
+textarea::-webkit-input-placeholder       {color: #C3B9B7; opacity: 1; transition: opacity .3s ease;}
+textarea::-moz-placeholder                {color: #C3B9B7; opacity: 1; transition: opacity .3s ease;}
+textarea:-ms-input-placeholder            {color: #C3B9B7; opacity: 1; transition: opacity .3s ease;}
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity .3s ease;}
+textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity .3s ease;}
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity .3s ease;}
 
 input[type="number"]{
   -moz-appearance: textfield;
@@ -51,72 +45,243 @@ input[type=number]::-webkit-outer-spin-button{
   margin: 0;
 }
 
-body {
-  font-family: "Raleway", "Open Sans", sans-serif;
+body{
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
   line-height: 1;
-  color: $black-color;
+  color: $brown-color;
+  font-weight: 300;
 }
 
-.img-responsive {display: inline-block; max-width: 100%; height: auto;}
+.img-responsive{
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
 
 .popup{
 	display: none;
-	padding: 40px 65px 65px;
-	background: #FFFFFF;
-	box-shadow: 0px 4px 24px rgba(29, 29, 33, 0.6), 0px 1px 1px rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
 }
 
-.nav-icon{
-	cursor: pointer;
-	display: none;
-	width: 30px;
-	height: 22px;
-	position: relative;
-	z-index: 150;
-	transform: rotate(0deg);
-	transition: .5s ease-in-out;
-
-	span{
-		display: block;
-		position: absolute;
-		height: 3px;
-		width: 100%;
-		background: #ffffff;
-		opacity: 1;
-		left: 0;
-		transform: rotate(0deg);
-		transition: .25s ease-in-out;
-		&:nth-child(1){
-			top: 0;
+.pizza{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $gray-color;
+	padding: 50px 0;
+	min-height: 100vh;
+	&__box{
+		display: flex;
+		width: 1000px;
+		background: #FFFFFF;
+		border-radius: 10px;
+		padding: 45px 85px 70px;
+		&--left{
+			width: 500px;
+			flex-shrink: 0;
+			position: relative;
 		}
-		&:nth-child(2), &:nth-child(3){
-			top: 10px;
-		}
-		&:nth-child(4){
-			top: 19px;
+		&--right{
+			flex-grow: 1;
+			margin-left: 25px;
+			position: relative;
 		}
 	}
-	&.open{
-		transform: scale(.75);
-		span{
-			&:nth-child(1){
-				top: 18px;
-				width: 0%;
-				left: 50%;
-			}
-			&:nth-child(2){
-				transform: rotate(45deg);
-			}
-			&:nth-child(3){
-				transform: rotate(-45deg);
-			}
-			&:nth-child(4){
-				top: 18px;
-				width: 0%;
-				left: 50%;
+	&__title{
+		font-size: 24px;
+		line-height: 1.2;
+		color: $brown-color;
+		font-weight: bold;
+		padding-bottom: 5px;
+	}
+	&__subtitle{
+		font-size: 18px;
+		line-height: 1.4;
+		color: #A69895;
+		padding-bottom: 35px;
+	}
+	&__image{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__name{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 0 30px;
+		input[type="text"]{
+			height: 40px;
+			background: #ffffff;
+			padding: 0 15px;
+			border: none;
+			border-bottom: 2px solid transparent;
+			outline: none;
+			font-size: 16px;
+			color: $brown-color;
+			font-weight: bold;
+			transition: all ease-in .2s;
+			&:focus{
+				border-bottom-color: $green-color;
+				& + svg{
+					path{
+						fill: $green-color;
+					}
+				}
 			}
 		}
+		svg{
+			path{
+				transition: all ease-in .2s;
+			}
+		}
+	}
+}
+
+.tabs{
+	&__buttons{
+		display: flex;
+		border-bottom: 4px solid #EFEEEE;
+		li{
+			cursor: pointer;
+			font-size: 18px;
+			line-height: 1.4;
+			font-weight: bold;
+			color: $brown-color;
+			border-bottom: 4px solid transparent;
+			padding-bottom: 15px;
+			margin: 0 45px -4px 0;
+			transition: all ease-in .2s;
+			&.active{
+				color: $green-color;
+				border-bottom-color: $green-color;
+			}
+		}
+	}
+	&__container{
+		padding-top: 25px;
+	}
+}
+
+.components{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	&__item{
+		width: calc(33.3% - 7px);
+		margin-bottom: 10px;
+	}
+}
+
+.content{
+	&__title{
+		font-size: 16px;
+		line-height: 1.4;
+		color: #725753;
+		font-weight: bold;
+		padding: 20px 0 5px;
+	}
+	&__table{
+		width: 100%;
+		margin-bottom: 40px;
+		tr{
+			td{
+				border-bottom: 1px solid #EDEDED;
+				padding: 10px 0;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 1.4;
+				color: $brown-color;
+				&:last-child{
+					text-align: right;
+					font-weight: bold;
+				}
+				&:first-child{
+					text-align: left;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}
+
+.result{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.price{
+	text-align: right;
+	&__label{
+		display: block;
+		font-size: 16px;
+		line-height: 1.4;
+		color: #725753;
+	}
+	&__number{
+		font-size: 24px;
+		line-height: 1.2;
+		color: #725753;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+
+.order{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	border: 1px solid #EFEEEE;
+	border-radius: 10px;
+	background: #ffffff;
+	padding: 15px;
+	&__close{
+		display: block;
+		width: 10px;
+		height: 10px;
+		background: url("../images/close.svg") center no-repeat;
+		padding: 0;
+		border: none;
+		outline: none;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		z-index: 1;
+	}
+	&__control{
+		position: relative;
+	}
+	&__input{
+		display: block;
+		width: 100%;
+		height: 40px;
+		border: 1px solid #EDEDED;
+		border-radius: 20px;
+		padding: 0 30px;
+		margin-bottom: 10px;
+		outline: none;
+		font-size: 14px;
+		color: $brown-color;
+		font-weight: bold;
+	}
+}
+
+.button-group{
+	display: flex;
+	justify-content: space-between;
+	margin-top: auto;
+	padding-top: 40px;
+	.button{
+		min-width: calc(50% - 5px);
 	}
 }

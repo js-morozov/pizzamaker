@@ -2,48 +2,246 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <title>Заголовок страницы</title>
+  <title>Соберите свою пиццу</title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/libs.min.css" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
 
-  
-
-  <!-- Модальные окна -->
-  <div id="success" class="popup">
-    <p class="popup-title">Спасибо за заявку!<br> Мы свяжемся с Вами в ближайшее время</p>
-  </div>
-
-  <div class="popup" id="callback">
-    <form class="form" id="callback-form">
-      <p class="form-title">Заказать<br> обратный звонок</p>
-      <div class="input-wrap">
-        <input type="text" class="input-text" name="name" placeholder="Имя">
+  <section class="pizza">
+    <div class="pizza__box">
+      <div class="pizza__box--left">
+        <h2 class="pizza__title">Соберите свою пиццу</h2>
+        <p class="pizza__subtitle">У пиццы может быть до 10 любых ингредиентов</p>
+        <div class="tabs">
+          <ul class="tabs__buttons">
+            <li>Сыр</li>
+            <li>Овощи</li>
+            <li>Мясо</li>
+          </ul>
+          <div class="tabs__container">
+            <div class="tabs__content">
+              <div class="components">
+                <div class="component component--selected components__item">
+                  <div class="component__image">
+                    <img src="images/mozarella.svg" alt="">
+                  </div>
+                  <p class="component__name">Сыр моцарелла</p>
+                  <p class="component__price">3.00 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/italy.svg" alt="">
+                  </div>
+                  <p class="component__name">Смесь итальянских сыров</p>
+                  <p class="component__price">4.50 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/blue_cheese.svg" alt="">
+                  </div>
+                  <p class="component__name">Сыр с плесенью</p>
+                  <p class="component__price">4.00 BYN</p>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content">
+              <div class="components">
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/tomato.svg" alt="">
+                  </div>
+                  <p class="component__name">Томаты</p>
+                  <p class="component__price">1.25 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/pineapple.svg" alt="">
+                  </div>
+                  <p class="component__name">Ананасы</p>
+                  <p class="component__price">3.50 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/oregano.svg" alt="">
+                  </div>
+                  <p class="component__name">Орегано</p>
+                  <p class="component__price">0.75 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/pepper.svg" alt="">
+                  </div>
+                  <p class="component__name">Перец халапеньо</p>
+                  <p class="component__price">1.00 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/mushroom.svg" alt="">
+                  </div>
+                  <p class="component__name">Шампиньоны</p>
+                  <p class="component__price">2.80 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/pickles.svg" alt="">
+                  </div>
+                  <p class="component__name">Маринованные огурцы</p>
+                  <p class="component__price">1.50 BYN</p>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__content">
+              <div class="components">
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/ham.svg" alt="">
+                  </div>
+                  <p class="component__name">Ветчина из индейки</p>
+                  <p class="component__price">4.50 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/smoked_sausages.svg" alt="">
+                  </div>
+                  <p class="component__name">Ароматная говядина</p>
+                  <p class="component__price">3.50 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/beef.svg" alt="">
+                  </div>
+                  <p class="component__name">Говядина</p>
+                  <p class="component__price">2.75 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/grilledchicken.svg" alt="">
+                  </div>
+                  <p class="component__name">Грудка куриная</p>
+                  <p class="component__price">2.00 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/shrimp.svg" alt="">
+                  </div>
+                  <p class="component__name">Креветки</p>
+                  <p class="component__price">5.80 BYN</p>
+                </div>
+                <div class="component components__item">
+                  <div class="component__image">
+                    <img src="images/pepperoni.svg" alt="">
+                  </div>
+                  <p class="component__name">Пепперони</p>
+                  <p class="component__price">1.90 BYN</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="input-wrap">
-        <input type="text" class="input-text" name="phone" placeholder="Телефон">
+      <div class="pizza__box--right">
+        <div class="pizza__image">
+          <img src="images/pizza.svg" alt="">
+        </div>
+        <div class="pizza__name">
+          <input type="text" placeholder="Придумайте название">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.1519L0.872296 10.3593L8.96 2.29053L12.3164 5.6375L4.21926 13.6873L0.426666 14.5691L0 14.1519ZM12.3259 0.280461L14.336 2.29053C14.5126 2.46818 14.6117 2.70849 14.6117 2.95898C14.6117 3.20947 14.5126 3.44978 14.336 3.62742L12.9422 4.97379L9.59526 1.61735L10.9321 0.280461C11.0203 0.191592 11.1252 0.121055 11.2407 0.0729189C11.3562 0.0247827 11.4802 0 11.6053 0C11.7305 0 11.8544 0.0247827 11.97 0.0729189C12.0855 0.121055 12.1904 0.191592 12.2785 0.280461H12.3259Z" fill="#EDEDED"/>
+          </svg>
+        </div>
+        <div class="switch">
+          <label class="switch__label">
+            <input type="radio" name="type" class="switch__radio" checked>
+            <span class="switch__text">Традиционное</span>
+          </label>
+          <label class="switch__label">
+            <input type="radio" name="type" class="switch__radio">
+            <span class="switch__text">Тонкое</span>
+          </label>
+        </div>
+        <div class="switch">
+          <label class="switch__label">
+            <input type="radio" name="size" class="switch__radio" checked>
+            <span class="switch__text">30 см</span>
+          </label>
+          <label class="switch__label">
+            <input type="radio" name="size" class="switch__radio">
+            <span class="switch__text">35 см</span>
+          </label>
+          <label class="switch__label">
+            <input type="radio" name="size" class="switch__radio">
+            <span class="switch__text">40 см</span>
+          </label>
+        </div>
+        <div class="content">
+          <p class="content__title">Ваша пицца содержит:</p>
+          <table class="content__table">
+            <tr>
+              <td>Традиционное тесто, 30 см</td>
+              <td>2.00 BYN</td>
+            </tr>
+            <tr>
+              <td>Традиционное тесто, 35 см</td>
+              <td>3.00 BYN</td>
+            </tr>
+            <tr>
+              <td>Традиционное тесто, 40 см</td>
+              <td>4.00 BYN</td>
+            </tr>
+          </table>
+        </div>
+        <div class="result">
+          <button class="button">Заказать</button>
+          <div class="price">
+            <span class="price__label">Итого:</span>
+            <span class="price__number">2.00 BYN</span>
+          </div>
+        </div>
+        <!-- Форма заказа -->
+        <form class="order" style="display: none;">
+          <button class="order__close"></button>
+          <div class="pizza__name">
+            <input type="text" value="Название Вашей пиццы" placeholder="Придумайте название">
+          </div>
+          <div class="order__control">
+            <input type="text" name="name" class="order__input" placeholder="Ваше имя">
+          </div>
+          <div class="order__control">
+            <input type="text" name="phone" class="order__input" placeholder="+375 (__) ___-__-__">
+          </div>
+          <div class="content">
+            <p class="content__title">Ваша пицца содержит:</p>
+            <table class="content__table">
+              <tr>
+                <td>Традиционное тесто, 30 см</td>
+              </tr>
+               <tr>
+                <td>Традиционное тесто, 35 см</td>
+              </tr>
+               <tr>
+                <td>Традиционное тесто, 40 см</td>
+              </tr>
+            </table>
+          </div>
+          <div class="result">
+            <span class="price__label">Итого:</span>
+            <span class="price__number">2.00 BYN</span>
+          </div>
+          <div class="button-group">
+            <button class="button button--primary" type="button">Назад</button>
+            <button class="button" type="submit">Заказать</button>
+          </div>
+        </form>
       </div>
-      <input type="hidden" name="type" value="Обратный звонок">
-      <div class="row-form">
-        <label class="checkbox">
-          <input type="checkbox" checked>
-          <span>
-            <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 7.5L5.5 11.5L15.5 1.5" stroke="#F6C502" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          Я согласен на обработку моих<br> персональных данных. 
-        </label>
-        <button type="submit" class="button">Заказать</button>
-      </div>
-    </form>
-  </div>
+    </div>
+  </section>
 
   <script src="libs/jquery/jquery-3.3.1.min.js"></script>
   <script src="libs/fancybox/jquery.fancybox.js"></script>
