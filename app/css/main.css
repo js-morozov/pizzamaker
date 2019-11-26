@@ -60,6 +60,10 @@ a {
   -webkit-transition: all ease-in .2s;
   -o-transition: all ease-in .2s;
   transition: all ease-in .2s; }
+  @media only screen and (max-width: 480px) {
+    .component {
+      height: auto;
+      padding: 10px; } }
   .component:before {
     content: "";
     display: block;
@@ -197,6 +201,11 @@ a {
   -webkit-transition: all ease-in .2s;
   -o-transition: all ease-in .2s;
   transition: all ease-in .2s; }
+  @media only screen and (max-width: 480px) {
+    .button {
+      font-size: 16px;
+      border-right: 20px;
+      height: 40px; } }
   .button:hover {
     color: #009471;
     background: #e1faf4; }
@@ -350,6 +359,9 @@ body {
   background: #F8F8F8;
   padding: 50px 0;
   min-height: 100vh; }
+  @media only screen and (max-width: 992px) {
+    .pizza {
+      padding: 15px; } }
   .pizza__box {
     display: -webkit-box;
     display: -webkit-flex;
@@ -359,12 +371,27 @@ body {
     background: #FFFFFF;
     border-radius: 10px;
     padding: 45px 85px 70px; }
+    @media only screen and (max-width: 992px) {
+      .pizza__box {
+        width: 100%;
+        padding: 25px; } }
+    @media only screen and (max-width: 768px) {
+      .pizza__box {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
     .pizza__box--left {
       width: 500px;
       -webkit-flex-shrink: 0;
           -ms-flex-negative: 0;
               flex-shrink: 0;
       position: relative; }
+      @media only screen and (max-width: 992px) {
+        .pizza__box--left {
+          width: 50%; } }
+      @media only screen and (max-width: 768px) {
+        .pizza__box--left {
+          width: 100%; } }
     .pizza__box--right {
       -webkit-box-flex: 1;
       -webkit-flex-grow: 1;
@@ -372,17 +399,30 @@ body {
               flex-grow: 1;
       margin-left: 25px;
       position: relative; }
+      @media only screen and (max-width: 768px) {
+        .pizza__box--right {
+          width: 100%;
+          margin: 25px 0 0; } }
   .pizza__title {
     font-size: 24px;
     line-height: 1.2;
     color: #70544F;
     font-weight: bold;
     padding-bottom: 5px; }
+    @media only screen and (max-width: 480px) {
+      .pizza__title {
+        font-size: 20px;
+        text-align: center; } }
   .pizza__subtitle {
     font-size: 18px;
     line-height: 1.4;
     color: #A69895;
     padding-bottom: 35px; }
+    @media only screen and (max-width: 480px) {
+      .pizza__subtitle {
+        font-size: 16px;
+        text-align: center;
+        padding-bottom: 15px; } }
   .pizza__image {
     display: -webkit-box;
     display: -webkit-flex;
@@ -453,12 +493,20 @@ body {
     -webkit-transition: all ease-in .2s;
     -o-transition: all ease-in .2s;
     transition: all ease-in .2s; }
+    @media only screen and (max-width: 480px) {
+      .tabs__buttons li {
+        font-size: 16px;
+        padding-bottom: 5px;
+        margin-right: 25px; } }
     .tabs__buttons li.active {
       color: #009471;
       border-bottom-color: #009471; }
 
 .tabs__container {
   padding-top: 25px; }
+  @media only screen and (max-width: 480px) {
+    .tabs__container {
+      padding-top: 10px; } }
 
 .components {
   display: -webkit-box;
@@ -476,6 +524,18 @@ body {
     width: -webkit-calc(33.3% - 7px);
     width: calc(33.3% - 7px);
     margin-bottom: 10px; }
+    @media only screen and (max-width: 992px) {
+      .components__item {
+        width: -webkit-calc(50% - 5px);
+        width: calc(50% - 5px); } }
+    @media only screen and (max-width: 768px) {
+      .components__item {
+        width: -webkit-calc(33.3% - 7px);
+        width: calc(33.3% - 7px); } }
+    @media only screen and (max-width: 480px) {
+      .components__item {
+        width: -webkit-calc(50% - 5px);
+        width: calc(50% - 5px); } }
 
 .content__title {
   font-size: 16px;
@@ -494,6 +554,10 @@ body {
     font-size: 16px;
     line-height: 1.4;
     color: #70544F; }
+    @media only screen and (max-width: 480px) {
+      .content__table tr td {
+        font-size: 14px;
+        padding: 5px 0; } }
     .content__table tr td:last-child {
       text-align: right;
       font-weight: bold; }
@@ -528,6 +592,9 @@ body {
     color: #725753;
     font-weight: bold;
     text-transform: uppercase; }
+    @media only screen and (max-width: 480px) {
+      .price__number {
+        font-size: 20px; } }
 
 .order {
   display: -webkit-box;

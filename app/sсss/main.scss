@@ -70,21 +70,45 @@ body{
 	background: $gray-color;
 	padding: 50px 0;
 	min-height: 100vh;
+
+	@include respond-to(md){
+		padding: 15px;
+	}
 	&__box{
 		display: flex;
 		width: 1000px;
 		background: #FFFFFF;
 		border-radius: 10px;
 		padding: 45px 85px 70px;
+
+		@include respond-to(md){
+			width: 100%;
+			padding: 25px;
+		}
+		@include respond-to(sm){
+			flex-wrap: wrap;
+		}
 		&--left{
 			width: 500px;
 			flex-shrink: 0;
 			position: relative;
+
+			@include respond-to(md){
+				width: 50%;
+			}
+			@include respond-to(sm){
+				width: 100%
+			}
 		}
 		&--right{
 			flex-grow: 1;
 			margin-left: 25px;
 			position: relative;
+
+			@include respond-to(sm){
+				width: 100%;
+				margin: 25px 0 0;
+			}
 		}
 	}
 	&__title{
@@ -93,12 +117,23 @@ body{
 		color: $brown-color;
 		font-weight: bold;
 		padding-bottom: 5px;
+
+		@include respond-to(xs){
+			font-size: 20px;
+			text-align: center;
+		}
 	}
 	&__subtitle{
 		font-size: 18px;
 		line-height: 1.4;
 		color: #A69895;
 		padding-bottom: 35px;
+
+		@include respond-to(xs){
+			font-size: 16px;
+			text-align: center;
+			padding-bottom: 15px;
+		}
 	}
 	&__image{
 		display: flex;
@@ -156,6 +191,12 @@ body{
 			padding-bottom: 15px;
 			margin: 0 45px -4px 0;
 			transition: all ease-in .2s;
+
+			@include respond-to(xs){
+				font-size: 16px;
+				padding-bottom: 5px;
+				margin-right: 25px;
+			}
 			&.active{
 				color: $green-color;
 				border-bottom-color: $green-color;
@@ -164,6 +205,10 @@ body{
 	}
 	&__container{
 		padding-top: 25px;
+
+		@include respond-to(xs){
+			padding-top: 10px;
+		}
 	}
 }
 
@@ -174,6 +219,16 @@ body{
 	&__item{
 		width: calc(33.3% - 7px);
 		margin-bottom: 10px;
+
+		@include respond-to(md){
+			width: calc(50% - 5px);
+		}
+		@include respond-to(sm){
+			width: calc(33.3% - 7px);
+		}
+		@include respond-to(xs){
+			width: calc(50% - 5px);
+		}
 	}
 }
 
@@ -196,6 +251,11 @@ body{
 				font-size: 16px;
 				line-height: 1.4;
 				color: $brown-color;
+
+				@include respond-to(xs){
+					font-size: 14px;
+					padding: 5px 0;
+				}
 				&:last-child{
 					text-align: right;
 					font-weight: bold;
@@ -229,6 +289,10 @@ body{
 		color: #725753;
 		font-weight: bold;
 		text-transform: uppercase;
+
+		@include respond-to(xs){
+			font-size: 20px;
+		}
 	}
 }
 
